@@ -76,7 +76,7 @@ typedef NS_ENUM(NSUInteger, IQActionSheetPickerStyle) {
  */
 - (instancetype)initWithTitle:(NSString *)title delegate:(id<IQActionSheetPickerViewDelegate>)delegate NS_DESIGNATED_INITIALIZER;
 
-
+@property (nonatomic) UIToolbar *actionToolbar;
 
 
 /*******************************************/

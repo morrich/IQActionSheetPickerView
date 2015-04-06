@@ -30,7 +30,6 @@
 {
     UIPickerView    *_pickerView;
     UIDatePicker    *_datePicker;
-    UIToolbar       *_actionToolbar;
     UILabel         *_titleLabel;
 
     IQActionSheetViewController *_actionSheetController;
@@ -56,7 +55,7 @@
         //UIToolbar
         {
             _actionToolbar = [[UIToolbar alloc] init];
-            _actionToolbar.barStyle = UIBarStyleBlackTranslucent;
+            _actionToolbar.barStyle = UIBarStyleDefault;
             [_actionToolbar sizeToFit];
             
             CGRect toolbarFrame = _actionToolbar.frame;
@@ -113,7 +112,7 @@
         
         //Initial settings
         {
-            self.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.8];
+            self.backgroundColor = [UIColor colorWithWhite:1.0 alpha:1.0];
             [self setFrame:CGRectMake(0, 0, CGRectGetWidth(_pickerView.frame), CGRectGetMaxY(_pickerView.frame))];
             [self setActionSheetPickerStyle:IQActionSheetPickerStyleTextPicker];
             
