@@ -361,6 +361,24 @@
     labelText.backgroundColor = [UIColor clearColor];
     [labelText setTextAlignment:NSTextAlignmentCenter];
     [labelText setText:_titlesForComponenets[component][row]];
+    
+    // change font size by title text length
+    if ([labelText.text length] > 22) {
+        labelText.font = [UIFont systemFontOfSize:8];
+    }
+    else if ([labelText.text length] > 18) {
+        labelText.font = [UIFont systemFontOfSize:10];
+    }
+    else if ([labelText.text length] > 14) {
+        labelText.font = [UIFont systemFontOfSize:12];
+    }
+    else if ([labelText.text length] > 10) {
+        labelText.font = [UIFont systemFontOfSize:16];
+    }
+    else {
+        labelText.font = [UIFont systemFontOfSize:20];
+    }
+    
     return labelText;
 }
 
